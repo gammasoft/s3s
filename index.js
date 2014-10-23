@@ -68,7 +68,7 @@ module.exports = (function() {
         args.debug = (args.debug && args.debug.toString() === 'true') || this.options.debug;
         args.accessKeyId = args.accessKeyId || this.options.accessKeyId;
         args.secretAccessKey = args.secretAccessKey || this.options.secretAccessKey;
-        args.key = args.key || '';
+        args.key = (args.key && encodeURI(args.key)) || '';
         args.method = args.method || 'GET';
         args.bucket = args.bucket || this.options.bucket || '';
         args.contentType = args.contentType || (args.key && mime.lookup(args.key));
@@ -139,7 +139,7 @@ module.exports = (function() {
             args.secure === false ? 'http://' : 'https://',
             args.bucket,
             '.s3.amazonaws.com/',
-            encodeURI(args.key) + '?',
+            args.key + '?',
             'AWSAccessKeyId=' + credentials.awsAccessKey + '&',
             'Signature=' + encodeURIComponent(credentials.signature) + '&',
             'Expires=' + credentials.date

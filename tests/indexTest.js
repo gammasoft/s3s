@@ -138,18 +138,6 @@ module.exports = {
         test.done();
     },
 
-    'Amazon Example #8': function(test) {
-        var credentials = s3sAmazonExamples.getCredentials({
-            method: 'GET',
-            key: 'fran%C3%A7ais/pr%c3%a9f%c3%a8re',
-            bucket: 'dictionary',
-            date: new Date('Wed, 28 Mar 2007 01:49:49 +0000')
-        });
-
-        test.equal(credentials.signature, 'DNEZGsoieTZ92F3bUfSPQcbGmlM=');
-        test.done();
-    },
-
     'Amazon Example #9': function(test) {
         var url = s3sAmazonExamples.getSignedUrl({
             bucket: 'johnsmith',
