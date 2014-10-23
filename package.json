@@ -1,0 +1,45 @@
+{
+  "name": "s3s",
+  "version": "0.0.1",
+  "description": "Simple utility to sign Amazon S3 requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gammasoft/s3s.git"
+  },
+  "keywords": [
+    "amazon",
+    "aws",
+    "s3",
+    "utils"
+  ],
+  "author": "Gammasoft Desenvolvimento de Software Ltda <contact@gammasoft.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gammasoft/s3s/issues"
+  },
+  "homepage": "https://github.com/gammasoft/s3s",
+  "dependencies": {
+    "gammautils": "0.0.59",
+    "mime": "~1.2.11",
+    "moment-timezone": "^0.2.2"
+  },
+  "devDependencies": {
+    "nodeunit": "~0.8.4",
+    "grunt-contrib-nodeunit": "~0.3.0",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0"
+  },
+  "contributors": [
+    {
+      "name": "Renato Gama",
+      "email": "renatoargh@gmail.com",
+      "url": "https://github.com/renatoargh",
+      "contributions": 1,
+      "hireable": false
+    }
+  ]
+}
