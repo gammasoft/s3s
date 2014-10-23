@@ -123,7 +123,7 @@ module.exports = (function() {
 
         return {
             awsAccessKey: args.accessKeyId,
-            date: args.expires || args.date || args.amazonHeaders['x-amz-date'],
+            date: args.expires || args.amazonHeaders['x-amz-date'] || args.date,
             key: args.key,
             contentType: args.contentType,
             signature: hmac('sha1', args.secretAccessKey, stringToSign)
